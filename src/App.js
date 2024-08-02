@@ -7,22 +7,24 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/Layout/About/About";
 import Service from "./components/Layout/Services/Service";
 import Contact from "./components/Layout/Contact/Contact";
+import WhatsAppButton from "./components/Layout/WhatsupButton/WhatsupButton";
 
 function App() {
   return (
     <Fragment>
       <Router>
         <div>
-          <Header/>
+          <Header />
           <Routes>
-            <Route path="/" element={<HomePage/>}/>
-            <Route path="/about" element={<About/>}/>
-            <Route path="/services" element={<Service/>}/>
-            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Service />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
-          <Footer/>
+          <Footer />
         </div>
       </Router>
+      <WhatsAppButton/>
     </Fragment>
   );
 }
