@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from "react";
 import {
   FaLocationDot,
   FaMobileScreenButton,
@@ -6,11 +6,9 @@ import {
 } from "react-icons/fa6";
 import emailjs from "@emailjs/browser";
 
-
-
 const Section7 = () => {
-
   const form = useRef();
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,17 +19,18 @@ const Section7 = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setMessage("Your message was sent successfully!");
+          form.current.reset(); // Optional: Clear the form after successful submission
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setMessage(`Failed to send message: ${error.text}`);
         }
       );
   };
 
   return (
     <>
-      <div className="bg-[#f3eee8] py-8 flex flex-col  gap-14">
+      <div className="bg-[#f3eee8] py-8 flex flex-col gap-14">
         {/* top section */}
         <section className="flex flex-col gap-4">
           <h1 className="text-5xl font-marcellus text-center">Contact Us</h1>
@@ -64,15 +63,15 @@ const Section7 = () => {
                       E-mail: sachin@gmail.com
                     </h1>
                   </div>
-                  <div className="flex  md:flex-row items-center justify-center md:justify-start gap-5">
+                  <div className="flex md:flex-row items-center justify-center md:justify-start gap-5">
                     <FaMobileScreenButton />
                     <h1 className="text-center md:text-start">9620000811</h1>
                   </div>
-                  <div className="flex  md:flex-row items-center justify-center md:justify-start gap-5">
+                  <div className="flex md:flex-row items-center justify-center md:justify-start gap-5">
                     <FaMobileScreenButton />
                     <h1 className="text-center md:text-start">9880883454</h1>
                   </div>
-                  <div className="flex  md:flex-row items-center justify-center md:justify-start gap-5">
+                  <div className="flex md:flex-row items-center justify-center md:justify-start gap-5">
                     <FaMobileScreenButton />
                     <h1 className="text-center md:text-start">919620277177</h1>
                   </div>
@@ -83,18 +82,18 @@ const Section7 = () => {
             {/* Right Section */}
             <div className="flex flex-1 shadow-lg py-3 px-5 bg-slate-300 mt-10 md:mt-0">
               <form ref={form} onSubmit={sendEmail}>
-                <div className="flex flex-col gap-5 ">
+                <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-2">
                     <label>Name</label>
-                    <input type="text" name="user_name" />
+                    <input type="text" name="user_name" required />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label>Email</label>
-                    <input type="email" className="" name="user_email" />
+                    <input type="email" name="user_email" required />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label>Message</label>
-                    <textarea name="message" />
+                    <textarea name="message" required />
                   </div>
                   <div>
                     <input
@@ -104,6 +103,17 @@ const Section7 = () => {
                     />
                   </div>
                 </div>
+                {message && (
+                  <div
+                    className={`mt-4 ${
+                      message.includes("Failed")
+                        ? "text-red-500"
+                        : "text-green-500"
+                    }`}
+                  >
+                    {message}
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -111,6 +121,6 @@ const Section7 = () => {
       </div>
     </>
   );
-}
+};
 
-export default Section7
+export default Section7;

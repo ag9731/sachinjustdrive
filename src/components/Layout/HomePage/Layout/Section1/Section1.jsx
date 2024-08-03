@@ -1,28 +1,28 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Section1.css";
 import emailjs from "@emailjs/browser";
 
 const Section1 = () => {
-
   const form = useRef();
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm("service_rkrjywj", "template_zjiqfsl", form.current, {
+        publicKey: "NEWhVls3FiGiDBlBk",
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setMessage("Your message was sent successfully!");
+          form.current.reset(); // Optional: Clear the form after successful submission
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setMessage(`Failed to send message: ${error.text}`);
         }
       );
   };
-
 
   return (
     <div>
@@ -49,24 +49,20 @@ const Section1 = () => {
             </div>
           </section>
           {/* Right Section */}
-          {/* <section className="font-bold w-[50%] flex-col">
-            <h1 className="text-white">Form</h1>
-          </section> */}
-
           <div className="container mx-auto w-[100%] justify-center md:justify-start flex flex-1 shadow-lg py-3 px-5 bg-black bg-opacity-30">
             <form ref={form} onSubmit={sendEmail}>
               <div className="flex flex-col gap-5 ">
                 <div className="flex flex-col gap-2">
                   <label className="text-white">Name</label>
-                  <input type="text" name="user_name" />
+                  <input type="text" name="user_name" required />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-white">Email</label>
-                  <input type="email" className="" name="user_email" />
+                  <input type="email" name="user_email" required />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-white">Message</label>
-                  <textarea name="message" />
+                  <textarea name="message" required />
                 </div>
                 <div>
                   <input
@@ -76,6 +72,15 @@ const Section1 = () => {
                   />
                 </div>
               </div>
+            {message && (
+              <div
+                className={`mt-4 ${
+                  message.includes("Failed") ? "text-red-500" : "text-green-500"
+                }`}
+              >
+                {message}
+              </div>
+            )}
             </form>
           </div>
         </div>
