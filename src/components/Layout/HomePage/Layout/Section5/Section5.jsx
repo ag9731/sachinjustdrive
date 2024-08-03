@@ -7,17 +7,17 @@ const Section5 = () => {
       {
         icon: FaCity,
         city: "Mysore",
-        phoneno: 9620000811,
+        phoneno: 919620277177,
       },
       {
         icon: FaCity,
         city: "Bengaluru",
-        phoneno: 9880883454,
+        phoneno: 919880883454,
       },
       {
         icon: FaCity,
         city: "Manglore",
-        phoneno: 9620000811,
+        phoneno: 919620000811,
       },
     ];
   return (

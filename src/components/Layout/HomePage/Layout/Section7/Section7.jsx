@@ -74,7 +74,7 @@ const Section7 = () => {
                   </div>
                   <div className="flex  md:flex-row items-center justify-center md:justify-start gap-5">
                     <FaMobileScreenButton />
-                    <h1 className="text-center md:text-start">9620000811</h1>
+                    <h1 className="text-center md:text-start">919620277177</h1>
                   </div>
                 </div>
               </div>
