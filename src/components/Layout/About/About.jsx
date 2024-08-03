@@ -47,12 +47,12 @@ const About = () => {
           </h1>
           {array.map((items) => (
             <>
-              <div key={items.id} className="mt-7 flex flex-col gap-5 px-6">
+              <div key={items.id} className="mt-7 flex flex-col gap-5 px-6 md:px-0">
                 {/* <img src={items.img} alt={items.alt} className="max-w-40" /> */}
                 <h1 className="font-semibold uppercase text-secondary text-2xl text-center md:text-start">
                   {items.title}
                 </h1>
-                <p className="text-[#828282] text-[2vmax] md:text-[1vmax] text-center md:flex-start">
+                <p className="text-[#828282] text-[2vmax] md:text-[1vmax] text-center md:text-start md:flex-start">
                   {items.desc}
                 </p>
               </div>
