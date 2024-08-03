@@ -16,8 +16,8 @@ const Section7 = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm("service_rkrjywj", "template_zjiqfsl", form.current, {
+        publicKey: "NEWhVls3FiGiDBlBk",
       })
       .then(
         () => {

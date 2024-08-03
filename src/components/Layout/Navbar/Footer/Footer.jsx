@@ -33,11 +33,21 @@ const Footer = () => {
 
             <div className="flex items-center space-x-3">
               <FaEnvelope className="text-lg" />
-              <p className="text-sm md:text-base">
-                E-mail: sachin@gmail.com
-              </p>
+              <p className="text-sm md:text-base">E-mail: sachin@gmail.com</p>
             </div>
 
+            <div className="flex items-center space-x-3">
+              <FaMobileScreenButton className="text-lg" />
+              <p className="text-sm md:text-base">9008834574</p>
+            </div>
+            <div className="flex items-center space-x-3">
+              <FaMobileScreenButton className="text-lg" />
+              <p className="text-sm md:text-base">9900930047</p>
+            </div>
+            <div className="flex items-center space-x-3">
+              <FaMobileScreenButton className="text-lg" />
+              <p className="text-sm md:text-base">9742344480</p>
+            </div>
             <div className="flex items-center space-x-3">
               <FaMobileScreenButton className="text-lg" />
               <p className="text-sm md:text-base">9880883454</p>
@@ -46,7 +56,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="flex flex-col space-y-4 flex-1 items-center justify-center">
-            <h2 className="text-lg font-bold text-primary text-center">Quick Links</h2>
+            <h2 className="text-lg font-bold text-primary text-center">
+              Quick Links
+            </h2>
             <ul className="space-y-2 flex flex-col justify-center items-center">
               <li className="hover:text-blue-600 transition">Home</li>
               <li className="hover:text-blue-600 transition">About</li>
