@@ -103,6 +103,12 @@ const Header = () => {
               className="text-white font-bold text-center py-2 text-[2.8vmax]"
               onClick={handleMenuItemClick}
             >
+              <Link to="/sachin-man-power">Sachin Management</Link>
+            </li>
+            <li
+              className="text-white font-bold text-center py-2 text-[2.8vmax]"
+              onClick={handleMenuItemClick}
+            >
               <Link to="/contact">Contact</Link>
             </li>
             <li onClick={handleMenuItemClick}>
