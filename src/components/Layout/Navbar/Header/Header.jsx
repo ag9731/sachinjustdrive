@@ -10,10 +10,9 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-   const handleMenuItemClick = () => {
-     setMenuOpen(false);
-   };
-
+  const handleMenuItemClick = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <Fragment>
@@ -38,7 +37,9 @@ const Header = () => {
                 <li>
                   <Link to="/services">Pricing & Services</Link>
                 </li>
-                <li>Fleet</li>
+                <li>
+                  <Link to="/sachin-man-power">Sachin Management</Link>
+                </li>
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
@@ -74,19 +75,34 @@ const Header = () => {
           }`}
         >
           <ul className="flex flex-col gap-3 items-center mobilemenu">
-            <li className="text-white font-bold text-center py-2 text-[2.8vmax]" onClick={handleMenuItemClick}>
+            <li
+              className="text-white font-bold text-center py-2 text-[2.8vmax]"
+              onClick={handleMenuItemClick}
+            >
               <Link to="/">Home</Link>
             </li>
-            <li className="text-white font-bold text-center py-2 text-[2.8vmax]" onClick={handleMenuItemClick}>
+            <li
+              className="text-white font-bold text-center py-2 text-[2.8vmax]"
+              onClick={handleMenuItemClick}
+            >
               <Link to="/about">About</Link>
             </li>
-            <li className="text-white font-bold text-center py-2 text-[2.8vmax]" onClick={handleMenuItemClick}>
+            <li
+              className="text-white font-bold text-center py-2 text-[2.8vmax]"
+              onClick={handleMenuItemClick}
+            >
               <Link to="/services">Pricing</Link>
             </li>
-            <li className="text-white font-bold text-center py-2 text-[2.8vmax]" onClick={handleMenuItemClick}>
+            <li
+              className="text-white font-bold text-center py-2 text-[2.8vmax]"
+              onClick={handleMenuItemClick}
+            >
               <Link to="/fleet">Fleet</Link>
             </li>
-            <li className="text-white font-bold text-center py-2 text-[2.8vmax]" onClick={handleMenuItemClick}>
+            <li
+              className="text-white font-bold text-center py-2 text-[2.8vmax]"
+              onClick={handleMenuItemClick}
+            >
               <Link to="/contact">Contact</Link>
             </li>
             <li onClick={handleMenuItemClick}>

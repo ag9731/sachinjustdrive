@@ -8,6 +8,7 @@ import About from "./components/Layout/About/About";
 import Service from "./components/Layout/Services/Service";
 import Contact from "./components/Layout/Contact/Contact";
 import WhatsAppButton from "./components/Layout/WhatsupButton/WhatsupButton";
+import Manpower from "./components/Layout/Manpower/Manpower";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Service />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/sachin-man-power" element={<Manpower/>} />
           </Routes>
           <Footer />
         </div>
