@@ -6,6 +6,7 @@ import {
   FaUsers,
   FaTools,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const services = {
   location:
@@ -143,6 +144,13 @@ const Manpower = () => {
           </div>
         ))}
       </div>
+      <section className="flex justify-center py-10">
+        <Link to="/contact">
+          <button className="bg-secondary hidden md:block border-none px-6 py-2 transition-all hover:bg-primary hover:border-black text-white rounded-full">
+            BOOK NOW
+          </button>
+        </Link>
+      </section>
     </section>
   );
 };

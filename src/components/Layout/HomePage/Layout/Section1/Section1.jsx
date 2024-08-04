@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./Section1.css";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 
 const Section1 = () => {
   const form = useRef();
@@ -40,12 +41,16 @@ const Section1 = () => {
               <span className="bg-primary font-thin ml-2"> For You.</span>
             </p>
             <div className="flex gap-5">
-              <button className="bg-secondary border-none px-10 py-3 transition-all hover:bg-[#fff] hover:text-black hover:border-black text-white rounded-full">
-                CONTACT
-              </button>
-              <button className="bg-white border-none px-10 py-3 transition-all hover:bg-primary hover:text-white hover:border-black text-black rounded-full">
-                ABOUT
-              </button>
+              <Link to="/contact">
+                <button className="bg-secondary border-none px-10 py-3 transition-all hover:bg-[#fff] hover:text-black hover:border-black text-white rounded-full">
+                  CONTACT
+                </button>
+              </Link>
+              <Link to="/about">
+                <button className="bg-white border-none px-10 py-3 transition-all hover:bg-primary hover:text-white hover:border-black text-black rounded-full">
+                  ABOUT
+                </button>
+              </Link>
             </div>
           </section>
           {/* Right Section */}
@@ -72,15 +77,17 @@ const Section1 = () => {
                   />
                 </div>
               </div>
-            {message && (
-              <div
-                className={`mt-4 ${
-                  message.includes("Failed") ? "text-red-500" : "text-green-500"
-                }`}
-              >
-                {message}
-              </div>
-            )}
+              {message && (
+                <div
+                  className={`mt-4 ${
+                    message.includes("Failed")
+                      ? "text-red-500"
+                      : "text-green-500"
+                  }`}
+                >
+                  {message}
+                </div>
+              )}
             </form>
           </div>
         </div>

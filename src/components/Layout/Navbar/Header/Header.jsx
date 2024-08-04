@@ -21,7 +21,7 @@ const Header = () => {
           {/* Left Side Data */}
           <section className="flex items-center gap-10">
             <img
-              className="max-w-40 min-w-32"
+              className="max-w-40  min-w-32"
               src={logo}
               alt="Sachin Just Drive Logo"
             />
@@ -62,9 +62,11 @@ const Header = () => {
 
           {/* Right Side Data */}
           <section>
-            <button className="bg-secondary hidden md:block border-none px-6 py-2 transition-all hover:bg-primary hover:border-black text-white rounded-full">
-              BOOK NOW
-            </button>
+            <Link to="/contact">
+              <button className="bg-secondary hidden md:block border-none px-6 py-2 transition-all hover:bg-primary hover:border-black text-white rounded-full">
+                BOOK NOW
+              </button>
+            </Link>
           </section>
         </div>
 

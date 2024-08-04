@@ -1,6 +1,7 @@
 import React from "react";
 import "./Section6.css";
 import { FaClockRotateLeft } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Section6 = () => {
   const array1 = [
@@ -212,6 +213,13 @@ const Section6 = () => {
               </table>
             </div>
           </div>
+        </section>
+        <section className="flex justify-center py-10">
+          <Link to="/contact">
+            <button className="bg-secondary border-none px-10 py-3 transition-all hover:bg-[#fff] hover:text-black hover:border-black text-white rounded-full">
+              BOOKNOW
+            </button>
+          </Link>
         </section>
       </section>
     </>

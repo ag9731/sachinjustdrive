@@ -15,7 +15,7 @@ function App() {
     <Fragment>
       <Router>
         <div>
-          <Header />
+          <Header className="header1"/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
