@@ -84,7 +84,7 @@ const Manpower = () => {
     <section className="container mx-auto mt-10 p-4">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-8" style={{ color: "#e23c12" }}>
-          Sachin Event Man Power
+          Sachin Man Power
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
