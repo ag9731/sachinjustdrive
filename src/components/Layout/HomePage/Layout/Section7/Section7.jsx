@@ -5,6 +5,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import emailjs from "@emailjs/browser";
+import "./Section7.css"
 
 const Section7 = () => {
   const form = useRef();
@@ -85,15 +86,25 @@ const Section7 = () => {
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-2">
                     <label>Name</label>
-                    <input type="text" name="user_name" required />
+                    <input
+                      type="text"
+                      name="user_name"
+                      required
+                      className="input-field"
+                    />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label>Email</label>
-                    <input type="email" name="user_email" required />
+                    <input
+                      type="email"
+                      name="user_email"
+                      required
+                      className="input-field"
+                    />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label>Message</label>
-                    <textarea name="message" required />
+                    <textarea name="message" required className="input-field" />
                   </div>
                   <div>
                     <input

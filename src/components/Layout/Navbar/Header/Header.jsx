@@ -3,7 +3,7 @@ import "./Header.css";
 import logo from "../../../../assets/sachin_just_drive_Logo.png";
 import { FaAngleDown } from "react-icons/fa6";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 
 const Header = () => {
@@ -29,19 +29,49 @@ const Header = () => {
             <div className="hidden md:block">
               <ul className="flex flex-col md:flex-row gap-0 z-50 md:static md:gap-10">
                 <li>
-                  <Link to="/">Home</Link>
+                  <NavLink
+                    to="/"
+                    activeClassName="text-red-500"
+                    className="text-black"
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <NavLink
+                    to="/about"
+                    activeClassName="text-red-500"
+                    className="text-black"
+                  >
+                    About
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/services">Pricing & Services</Link>
+                  <NavLink
+                    to="/services"
+                    activeClassName="text-red-500"
+                    className="text-black"
+                  >
+                    Pricing & Services
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/sachin-man-power">Sachin Management</Link>
+                  <NavLink
+                    to="/sachin-man-power"
+                    activeClassName="text-red-500"
+                    className="text-black"
+                  >
+                    Sachin ManPowers
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <NavLink
+                    to="/contact"
+                    activeClassName="text-red-500"
+                    className="text-black"
+                  >
+                    Contact
+                  </NavLink>
                 </li>
               </ul>
             </div>

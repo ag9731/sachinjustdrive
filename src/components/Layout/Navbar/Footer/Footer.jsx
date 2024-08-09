@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa6";
 import logo from "../../../../assets/sachin_just_drive_Logo.png";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -60,10 +61,18 @@ const Footer = () => {
               Quick Links
             </h2>
             <ul className="space-y-2 flex flex-col justify-center items-center">
-              <li className="hover:text-blue-600 transition">Home</li>
-              <li className="hover:text-blue-600 transition">About</li>
-              <li className="hover:text-blue-600 transition">Fleet</li>
-              <li className="hover:text-blue-600 transition">Contact</li>
+              <li className="hover:text-blue-600 transition">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="hover:text-blue-600 transition">
+                <Link to="/about">About</Link>
+              </li>
+              <li className="hover:text-blue-600 transition">
+                <Link to="/sachin-man-power">Sachin Management</Link>
+              </li>
+              <li className="hover:text-blue-600 transition">
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
 
