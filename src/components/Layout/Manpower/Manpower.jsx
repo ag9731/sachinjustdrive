@@ -12,7 +12,7 @@ const services = {
   location:
     "30th 'B' Main, opp. Siddalingeshwara Theater, J.P. Nagar 6th Phase, Bengaluru-78",
   mobileNumbers: ["9008834574", "9900930047", "9742344480", "9880883454"],
-  email: "sachin@gmail.com",
+  email: "sachinmanpowers@gmail.com",
   receptionist: [
     {
       title: "Welcome girls",

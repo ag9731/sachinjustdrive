@@ -34,24 +34,47 @@ const Footer = () => {
 
             <div className="flex items-center space-x-3">
               <FaEnvelope className="text-lg" />
-              <p className="text-sm md:text-base">E-mail: sachin@gmail.com</p>
+              <p className="text-sm md:text-base">
+                <span className="text-secondary font-bold">
+                  Sachin Just Drive
+                </span>
+                : sachin@gmail.com
+              </p>
+            </div>
+
+            <div className="flex items-center space-x-3">
+              <FaEnvelope className="text-lg" />
+              <p className="text-sm md:text-base">
+                <span className="text-secondary font-bold">
+                  Sachin Manpower
+                </span>
+                : sachinmanpowers@gmail.com
+              </p>
             </div>
 
             <div className="flex items-center space-x-3">
               <FaMobileScreenButton className="text-lg" />
-              <p className="text-sm md:text-base">9008834574</p>
+              <p className="text-sm md:text-base">
+                <a href="tel:9008834574">9008834574</a>
+              </p>
             </div>
             <div className="flex items-center space-x-3">
               <FaMobileScreenButton className="text-lg" />
-              <p className="text-sm md:text-base">9900930047</p>
+              <p className="text-sm md:text-base">
+                <a href="tel:9900930047">9900930047</a>
+              </p>
             </div>
             <div className="flex items-center space-x-3">
               <FaMobileScreenButton className="text-lg" />
-              <p className="text-sm md:text-base">9742344480</p>
+              <p className="text-sm md:text-base">
+                <a href="tel:9742344480">9742344480</a>
+              </p>
             </div>
             <div className="flex items-center space-x-3">
               <FaMobileScreenButton className="text-lg" />
-              <p className="text-sm md:text-base">9880883454</p>
+              <p className="text-sm md:text-base">
+                <a href="tel:9880883454">9880883454</a>
+              </p>
             </div>
           </div>
 

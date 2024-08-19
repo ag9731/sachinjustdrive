@@ -58,23 +58,52 @@ const Section7 = () => {
                       Phase, J. P. Nagar, Bengaluru, Karnataka 560587
                     </h1>
                   </div>
-                  <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-5">
+                  {/* <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-5">
                     <FaEnvelope />
                     <h1 className="text-center md:text-start">
                       E-mail: sachin@gmail.com
                     </h1>
+                  </div> */}
+
+                  <div className="flex items-center space-x-3">
+                    <FaEnvelope className="text-lg" />
+                    <p className="text-sm md:text-base">
+                      <span className="text-secondary font-bold">
+                        Sachin Just Drive
+                      </span>
+                      : <a href="mailto:sachin@gmail.com">sachin@gmail.com</a>
+                    </p>
+                  </div>
+
+                  <div className="flex items-center space-x-3">
+                    <FaEnvelope className="text-lg" />
+                    <p className="text-sm md:text-base">
+                      <span className="text-secondary font-bold">
+                        Sachin Manpower
+                      </span>
+                      :{" "}
+                      <a href="mailto:sachinmanpowers@gmail.com">
+                        sachinmanpowers@gmail.com
+                      </a>
+                    </p>
                   </div>
                   <div className="flex md:flex-row items-center justify-center md:justify-start gap-5">
                     <FaMobileScreenButton />
-                    <h1 className="text-center md:text-start">9620000811</h1>
+                    <h1 className="text-center md:text-start">
+                      <a href="tel:9620000811">9620000811</a>
+                    </h1>
                   </div>
                   <div className="flex md:flex-row items-center justify-center md:justify-start gap-5">
                     <FaMobileScreenButton />
-                    <h1 className="text-center md:text-start">9880883454</h1>
+                    <h1 className="text-center md:text-start">
+                      <a href="tel:9880883454">9880883454</a>
+                    </h1>
                   </div>
                   <div className="flex md:flex-row items-center justify-center md:justify-start gap-5">
                     <FaMobileScreenButton />
-                    <h1 className="text-center md:text-start">919620277177</h1>
+                    <h1 className="text-center md:text-start">
+                      <a href="tel:919620277177"></a>919620277177
+                    </h1>
                   </div>
                 </div>
               </div>
