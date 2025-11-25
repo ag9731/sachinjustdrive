@@ -16,6 +16,7 @@ const Footer = () => {
     <section className="bg-[#e2e8f0] border-t-2 border-b-slate-900 py-8 mt-20">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between md:items-start items-center space-y-6 md:space-y-0">
+          
           {/* Logo and Contact Information */}
           <div className="flex flex-col items-center flex-1 md:items-start space-y-4 md:space-y-6">
             <img
@@ -107,11 +108,27 @@ const Footer = () => {
               width="100%"
               height="300"
               style={{ border: 0 }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+        </div>
+
+        {/* Footer Bottom Text */}
+        <div className="text-center text-sm text-gray-700 mt-6 pt-4 border-t border-gray-400">
+          <p>© {new Date().getFullYear()} Sachin Just Drive. All rights reserved.</p>
+          <p className="text-xs mt-1">
+            Developed & Designed by{" "}
+            <a
+              href="https://www.parvidigital.com"
+              className="font-semibold underline hover:text-blue-600"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Parvi Digital
+            </a>
+          </p>
         </div>
       </div>
     </section>
